@@ -80,9 +80,9 @@ function createRock(x) {
     
     var top = 0; 
     function step() {
-      DODGER.style.left = `${top += 2}px`
+      rock.style.top = `${top += 2}px`
  
-      if (DODGER.style.left < GAME_WIDTH) {
+      if (top < GAME_WIDTH) {
         window.requestAnimationFrame(step)
       }
     }
