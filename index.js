@@ -80,7 +80,7 @@ function createRock(x) {
     
     function step() {
       rock.style.top = `${top += 2}px`
-      console.log(rock.style.top);
+      // console.log(rock.style.top);
    
       if (top < GAME_HEIGHT) {
         window.requestAnimationFrame(step)
