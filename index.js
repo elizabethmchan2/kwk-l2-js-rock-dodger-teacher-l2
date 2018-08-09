@@ -135,13 +135,13 @@ function moveDodger(e) {
    */
   document.addEventListener('keydown', function(e) {
     if(e.which == LEFT_ARROW) { //left arrow
-      console.log("left")
+      // console.log("left")
       moveDodgerLeft()
     } else if (e.which == RIGHT_ARROW) { //right arrow
-     console.log("right")
+    // console.log("right")
      moveDodgerRight()
     } else { 
-      console.log("what")
+      // console.log("what")
     }
   })
   
