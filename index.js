@@ -78,12 +78,13 @@ function createRock(x) {
     // implement me!
     // (use the comments below to guide you!)
     
-    var top = 0; 
-    function stepRock() {
-      rock.style.top = `${top += 20}px`
+    var top = 0
  
-      while (top < GAME_HEIGHT) {
-        window.requestAnimationFrame(stepRock)
+    function step() {
+      el.style.top = `${top += 2}px`
+   
+      if (top < 200) {
+        window.requestAnimationFrame(step)
       }
     }
     window.requestAnimationFrame(stepRock)
