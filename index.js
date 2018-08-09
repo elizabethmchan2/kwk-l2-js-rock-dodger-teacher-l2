@@ -69,8 +69,6 @@ function createRock(x) {
    */
    document.getElementById("game").append(rock);
    
-   
-
 
   /**
    * This function moves the rock. (2 pixels at a time
@@ -79,6 +77,19 @@ function createRock(x) {
   function moveRock() {
     // implement me!
     // (use the comments below to guide you!)
+    
+    var original = DODGER.style.left; 
+    var intOfOriginal = parseInt(original.split("px")[0]); // or parseInt(positionToInteger(original)) 
+    var left = 0; 
+    function step() {
+      DODGER.style.left = `${intOfOriginal += 2}px`
+ 
+      if (DODGER.style.left < GAME_WIDTH) {
+        window.requestAnimationFrame(step)
+      }
+    }
+    window.requestAnimationFrame(step)
+  
     /**
      * If a rock collides with the DODGER,
      * we should call endGame()
