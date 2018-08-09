@@ -85,7 +85,7 @@ function createRock(x) {
         window.requestAnimationFrame(step)
       }
     }
-    window.requestAnimationFrame(stepRock)
+    window.requestAnimationFrame(step)
   
     /**
      * If a rock collides with the DODGER,
