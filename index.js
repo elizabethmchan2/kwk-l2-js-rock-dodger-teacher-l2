@@ -80,7 +80,7 @@ function createRock(x) {
     
     var top = 0; 
     function stepRock() {
-      rock.style.top = `${top += 2}px`
+      rock.style.top = `${top += 20}px`
  
       while (positionToInteger(rock.style.top) > 0) {
         window.requestAnimationFrame(stepRock)
