@@ -78,11 +78,9 @@ function createRock(x) {
     // implement me!
     // (use the comments below to guide you!)
     
-    var original = DODGER.style.left; 
-    var intOfOriginal = parseInt(original.split("px")[0]); // or parseInt(positionToInteger(original)) 
-    var left = 0; 
+    var top = 0; 
     function step() {
-      DODGER.style.left = `${intOfOriginal += 2}px`
+      DODGER.style.left = `${top += 2}px`
  
       if (DODGER.style.left < GAME_WIDTH) {
         window.requestAnimationFrame(step)
