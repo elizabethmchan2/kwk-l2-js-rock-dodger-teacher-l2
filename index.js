@@ -79,14 +79,14 @@ function createRock(x) {
     // (use the comments below to guide you!)
     
     var top = 0; 
-    function step() {
+    function stepRock() {
       rock.style.top = `${top -= 2}px`
  
       while (positionToInteger(rock.style.top) > 0) {
-        window.requestAnimationFrame(step)
+        window.requestAnimationFrame(stepRock)
       }
     }
-    window.requestAnimationFrame(step)
+    window.requestAnimationFrame(stepRock)
   
     /**
      * If a rock collides with the DODGER,
