@@ -63,7 +63,7 @@ function createRock(x) {
   rock.style.top = top;
   rock.style.width = "20px";
   rock.style.height = "20px";
-  rock.style.backgroundColor = "black";
+  rock.style.backgroundColor = "white";
 
   /**
    * Now that we have a rock, we'll need to append
