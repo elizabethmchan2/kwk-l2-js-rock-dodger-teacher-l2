@@ -119,7 +119,20 @@ function moveDodger(e) {
    * we've declared for you above.)
    * And be sure to use the functions declared below!
    */
+  document.addEventListener('keydown', function(e) {
+    if(e.which == LEFT_ARROW) { //left arrow
+      console.log("left")
+      moveDodgerLeft()
+    } else if (e.which == RIGHT_ARROW) { //right arrow
+     console.log("right")
+     moveDodgerRight()
+    } else { 
+      console.log("what")
+    }
+  })
+  
 }
+
 
 function moveDodgerLeft() {
   // implement me!
@@ -127,6 +140,18 @@ function moveDodgerLeft() {
    * This function should move DODGER to the left
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
+   var original = DODGER.style.left; 
+    var intOfOriginal = parseInt(original.split("px")[0]); 
+    var left = 0; 
+    function step() {
+      DODGER.style.left = `${intOfOriginal -= 2}px`
+ 
+    if (DODGER.style.left < GAME_WIDTH) {
+      window.requestAnimationFrame(step)
+    }
+  }
+  window.requestAnimationFrame(step)
+   
 }
 
 function moveDodgerRight() {
@@ -135,6 +160,17 @@ function moveDodgerRight() {
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
+    var original = DODGER.style.left; 
+    var intOfOriginal = parseInt(original.split("px")[0]); 
+    var left = 0; 
+    function step() {
+      DODGER.style.left = `${intOfOriginal += 2}px`
+ 
+    if (DODGER.style.left < GAME_WIDTH) {
+      window.requestAnimationFrame(step)
+    }
+  }
+  window.requestAnimationFrame(step)
 }
 
 /**
