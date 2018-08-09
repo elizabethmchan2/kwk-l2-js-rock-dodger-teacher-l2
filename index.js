@@ -82,7 +82,7 @@ function createRock(x) {
     function step() {
       rock.style.top = `${top -= 2}px`
  
-      while (top > 0) {
+      while (positionToInteger(rock.style.top) > 0) {
         window.requestAnimationFrame(step)
       }
     }
