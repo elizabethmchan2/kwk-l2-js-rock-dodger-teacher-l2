@@ -78,19 +78,15 @@ function createRock(x) {
     // implement me!
     // (use the comments below to guide you!)
     
-    function repeatOften() {
-    $("<div />").appendTo("body");
-    globalID = requestAnimationFrame(repeatOften);
-  }
-  
-    globalID = requestAnimationFrame(repeatOften);
-  
-  $("#stop").on("click", function() {
-    cancelAnimationFrame(globalID);
-  });
-  $("#start").on("click", function() {
-    globalID = requestAnimationFrame(repeatOften);
-  });
+    var top = 0
+    function step() {
+      rock.style.top = `${top += 2}px`
+   
+      // if (top < 200) {
+        window.requestAnimationFrame(step)
+      // }
+    }
+    window.requestAnimationFrame(stepRock)
   
     /**
      * If a rock collides with the DODGER,
