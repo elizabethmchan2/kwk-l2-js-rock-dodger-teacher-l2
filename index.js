@@ -60,7 +60,7 @@ function createRock(x) {
   // Hmmm, why would we have used `var` here?
   var top = 0
 
-  rock.style.top = 20;
+  rock.style.top = top;
 
 
   /**
