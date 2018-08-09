@@ -60,7 +60,7 @@ function createRock(x) {
   // Hmmm, why would we have used `var` here?
   var top = 0
 
-  rock.style.top = 20;
+  rock.style.top = 0;
 
 
   /**
@@ -108,7 +108,7 @@ function createRock(x) {
 
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
-  moveRock();
+  
   ROCKS.push(rock);
 
   // Finally, return the rock element you've created
